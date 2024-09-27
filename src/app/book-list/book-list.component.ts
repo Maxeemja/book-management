@@ -13,7 +13,7 @@ import { AppState } from '../app.state';
 export class BookListComponent {
   store = inject(Store<AppState>);
 
-  books$!: Observable<Book>;
+  books$!: Observable<Book[]>;
 
   ngOnInit() {
     this.books$ = this.store.pipe(select('book'));
